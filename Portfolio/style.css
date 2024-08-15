@@ -1,0 +1,321 @@
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /* border-radius: 10px; */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  /* border-radius: 10px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+/* scroll bar ends */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primar-color : orangered;
+}
+.main-color {
+  color: var(--primar-color);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+.main-content {
+  max-width: 1400px;
+  margin: auto;
+}
+header {
+  background-color: #044e83;
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+nav a {
+  text-decoration-line: none;
+  color: inherit;
+  margin-right: 30px;
+  font-size: 18px;
+  position: relative;
+}
+nav a::after {
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  height: 5px;
+  width: 0px;
+  background-color: var(--primar-color);
+}
+nav a:hover::after {
+  width: 100%;
+}
+.logo h1 {
+  font-size: 40px;
+}
+.menu-icon {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+.close-icon {
+  position: absolute;
+  top: 10px;
+  display: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  right: 16px;
+}
+.open-menu {
+  top: 0;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  height: 100%;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.image img {
+  border: 10px solid orangered;
+  box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  border-radius: 20px;
+  width: 100%;
+}
+.name {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  line-height: 60px;
+  font-size: 66px;
+}
+.front {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.font-size {
+  font-size: 40px;
+  color: var(--primar-color);
+  cursor: pointer;
+  margin-left: 10px;
+}
+.section2 h1 {
+  margin-left: 50px;
+}
+ul li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primar-color);
+  margin-bottom: 10px;
+}
+.skill img {
+  max-width: 600px;
+  width: 100%;
+}
+.skill {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-me {
+  padding: 0 50px;
+}
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.img img {
+  width: 100%;
+  max-width: 600px;
+}
+h3 {
+  margin-bottom: 20px;
+}
+
+.text-center {
+  font-size: 30px;
+}
+p {
+  font-size: 25px;
+}
+.coder img {
+  max-width: 300px;
+  width: 100%;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.h1about {
+  margin-left: 50px;
+}
+.uparrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: var(--primar-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 10px;
+}
+.para {
+  max-width: 500px;
+}
+.footer {
+  background-color: gray;
+  text-align: center;
+  font-size: 20px;
+}
+::selection {
+  /* color: red; */
+  background-color: #b30000;
+
+}
+#logo {
+  position: relative;
+}
+#logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background-color: orangered;
+  width: 50%;
+  height: 5px;
+}
+/*################################# media quarries starts here ########################## */
+
+@media (max-width: 600px) {
+  .home {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+  .image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .name {
+    font-size: 30px;
+  }
+  .front {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h1about {
+    text-align: center;
+  }
+  .footer {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .coder img {
+    max-width: 200px;
+  }
+  .about h1 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .contact {
+    flex-direction: column-reverse;
+  }
+  .contact-me {
+    padding: 0 0px;
+  }
+  .contact-me h1 {
+    text-align: center;
+  }
+  .section2 h1 {
+    text-align: center;
+  }
+  .section2 {
+    margin-top: 15px;
+  }
+  ul {
+    /* justify-self: flex-start; */
+    align-self: flex-start;
+    margin-left: 50px;
+  }
+  .skill {
+    flex-direction: column-reverse;
+  }
+  .font-size {
+    font-size: 30px;
+  }
+  header {
+    padding: 20px 40px;
+  }
+  .close-icon {
+    display: block;
+  }
+  .logo h1 {
+    font-size: 25px;
+  }
+  nav {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    gap: 20px;
+    transition: all 0.2s ease-in-out;
+    top: -210px;
+    display: flex;
+    flex-direction: column;
+    background-color: #044e83;
+    color: #fff;
+    padding-top: 40px;
+    right: 0px;
+    align-items: center;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
